@@ -1,4 +1,0 @@
-baseURL = 'https://blog.osinfo.net/'
-languageCode = 'en-us'
-title = 'Open Source Info'
-theme = "hugo-theme-stack"
