@@ -35,8 +35,8 @@ params:
     favicon:
 
     footer:
-        since: 
-        customText: 
+        since: 2022
+        customText: Theme <a href="https://github.com/CaiJimmy/hugo-theme-stack"><b>Stack</b></a> designed by Jimmy  
 
     dateFormat:
         published: Jan 02, 2006
