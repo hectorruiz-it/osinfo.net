@@ -26,55 +26,34 @@ website = "https://github.com/IT-Noobie"
 image = "it-noobie.png"
 
 +++
+## Simple functions
 
-## Variables
-Variales are names given to computer memory location where your store data in a program. In Rust, we define variables with `let`:
+In Rust we can create multiple functions apart from the main one. Here is a little example of how to do it:
+
 ```rust
 fn main() {
-	let name = "osinfo";
-	let number: u32 = 1;
-	let array = [1,2,3,4];
+	printn!("Hey, how are you doing!")
+
+	hello_friend(); // We are calling a function called hello_there
+}
+
+fn hello_there() {  // We've created a new function called hello_there
+	println!("Hello my friend!");
 }
 ```
-In Rust we have two types of variables which are:
-* **Immutable variables**: Default behaviour, you can't modify its value.
-* **Mutable variables**: You can modify the value of the variable.
+> Rust code uses snake case as the conventional style. This means all lowercase and underscore separated words.
+
+## Parameterized functions
+Functions can have parameters. Parameters or arguments are variables that are only in the scope of the function code. This means it cannot be accessed anywhere outside the function block. The arguments values are provided by the script.
 ```rust
-fn main () {
-	let a: i32 = -5;     // Immutable variable
-	let mut b: u32 = 9;  // Mutable variable
+fn main() {
+	println!("Let's do some functions");
+	addition(5);
 }
-```
-> You have to specify `mut` to make variables mutable.
----
 
-## Constants
-Constants are variables that can't be converted to mutable by design and have an explicit data type.
-```rust
-fn main () {
-	const MAX_POINT: i32 = -5;    
+fn addition (x: u32) {
+	println!("The values is: {}", x);
 }
+
 ```
-> Constants must be written in uppercase by convention.
----
-## Shadowing
-Shadowing is a Rust concept of assigning a new value to an immutable variable. With an example is easier to understand:
-
-```rust
-fn main () {
-	let x: u32 = 4;
-	let x: u32 = x +1
-	
-	println!("The value of x is: {}", x);
-}
-```
-Rust programmers say that the first variable declaration is being shadowed by the second. 
-
-###  Shadowing vs Mutable variables
-* Without using `let`, script will fail.
-* You can only do certain transformations:
-	* Change data type.
-	* Change value adressing the previous value.
-	* ...
-* After a modification has been made, the variable will remain immutable.
-
+> When we use arguments, we must specify the argument data type.
